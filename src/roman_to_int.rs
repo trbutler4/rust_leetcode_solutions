@@ -44,6 +44,7 @@ s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 It is guaranteed that s is a valid roman numeral in the range [1, 3999]. 
 */
 
+#[allow(dead_code)]
 pub fn solution1(s: String) -> i32 {
     // replace specific cases, and then just add digits 
     let s_flat = s

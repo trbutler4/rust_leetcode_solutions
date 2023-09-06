@@ -1,10 +1,8 @@
 mod roman_to_int;
-fn main() {
-    check_roman_to_int();
-}
+mod merge_alternately;
 
-fn check_roman_to_int() {
-    let s: String = String::from("III");
-    println!("Example 1");
-    println!("{}", roman_to_int::solution1(s));
+fn main() {
+    let word1: String = String::from("abc");
+    let word2: String = String::from("pqrs");
+    println!("{}", merge_alternately::solution1(word1, word2));
 }
