@@ -37,8 +37,25 @@ Constraints:
 word1 and word2 consist of lowercase English letters.
 */
 
+#[allow(dead_code)]
 pub fn solution1(word1: String, word2: String) -> String {
-    println!("{}", word1);
-    println!("{}", word2);
-    "balls".to_string()
+    // basically just merge sort 
+
+    // base case 
+    if word1.is_empty() {
+        return word2;
+    }
+    if word2.is_empty() {
+        return word1;
+    }
+
+    // grab first character of each word 
+    let c1 = &word1[0..1];
+    let c2 = &word2[0..1];
+
+    // recusively pass slices 
+    let sliced_word1 = &word1[1..];
+    let sliced_word2 = &word2[1..];
+
+    format!("{}{}{}", c1, c2, solution1(sliced_word1.to_string(), sliced_word2.to_string()))
 }
