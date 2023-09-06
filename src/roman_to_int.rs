@@ -1,7 +1,7 @@
 
 
 // NOTE: this is not efficient at all
-pub fn solution(s: String) -> i32 {
+pub fn solution1(s: String) -> i32 {
     // replace specific cases, and then just add digits 
     let s_flat = s
         .replace("IV", "IIII")
@@ -25,10 +25,4 @@ pub fn solution(s: String) -> i32 {
         }
     }).sum()
 
-}
-
-pub fn example1() {
-    let s: String = String::from("III");
-    println!("Example 1");
-    println!("{}", solution(s));
 }
